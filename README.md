@@ -1,5 +1,7 @@
 # Telecom Customer Churn & Retention Analytics 📊
 
+![Dashboard Preview](Final_Executive_Dashboard_View.png)
+
 ## 📌 Project Overview
 Customer retention is a critical key performance indicator in the telecommunications industry. This end-to-end Data Analytics project analyzes telecom customer records to identify the core drivers of customer churn, measure financial impact, and provide actionable business recommendations to minimize revenue loss.
 
