@@ -1,32 +1,43 @@
 # Telecom Customer Churn & Retention Analytics 📊
 
 ## 📌 Project Overview
-The telecommunication industry faces intense competition, making customer retention a critical priority. This project analyzes telecom customer behavior to identify the key drivers of churn and provides data-driven recommendations to improve retention rates.
+Customer retention is a critical key performance indicator in the telecommunications industry. This end-to-end Data Analytics project analyzes telecom customer records to identify the core drivers of customer churn, measure financial impact, and provide actionable business recommendations to minimize revenue loss.
 
-## 🛠️ Tech Stack & Tools
-* **Visualization:** Power BI
-* **Data Transformation:** Power Query (ETL)
-* **Analytical Calculations:** Advanced DAX (Data Analysis Expressions)
-* **Industry Focus:** Telecommunications & Business Intelligence
+---
+
+## 🛠️ Tech Stack & Workflow
+* **Tool:** Microsoft Power BI Desktop
+* **ETL (Extract, Transform, Load):** Power Query Editor used for data ingestion, cleaning missing values, and formatting data types.
+* **Data Modeling & DAX:** Created a custom calculated measure table and dynamic business metrics using advanced Data Analysis Expressions (DAX).
+* **Data Visualization:** Designed an interactive, executive-ready dark-themed dashboard focused on key risk indicators.
+
+---
+
+## 📐 Core DAX Measures Implemented
+* **Total Customers:** `COUNT(Customer_Churn_Data[customerID])` to establish the active baseline.
+* **Churned Customers:** `CALCULATE(COUNT(...), Churn = "Yes")` to track total service cancellations.
+* **Retained Customers:** `CALCULATE(COUNT(...), Churn = "No")` to track active, loyal users.
+* **Churn Rate %:** `DIVIDE([Churned Customers], [Total Customers])` for dynamic percentage calculation.
+* **Average Monthly Charges:** Segmented across Churned vs. Retained cohorts to evaluate financial impact and cost sensitivity.
+
+---
 
 ## 💡 Key Business Insights
-* **Churn Rate:** The baseline churn rate is **26.54%**, with 1,869 customers leaving the service.
-* **Contract Risk:** Customers on **Month-to-Month contracts** have the highest churn density, contributing to over 1,600 churned cases.
-* **Pricing Factor:** Churned customers had a higher average monthly charge (**$74**) compared to retained customers (**$61**), indicating price sensitivity.
-* **Tenure Impact:** The most critical risk period is the first **0-6 months**, where over 50% of the total churn occurs.
+* **High Overall Churn:** The company exhibits a concerning overall churn rate of **26.54%** (1,869 out of 7,043 customers).
+* **Contract Vulnerability:** Customers on **Month-to-Month contracts** account for the vast majority of drop-offs (1,655 users), whereas 1-year and 2-year contracts show strong retention.
+* **Early-Stage Drop-off:** The first 6 months of customer tenure represent the highest risk period, peaking at a **52.94%** churn rate in the 0–6 month band.
+* **Pricing Correlation:** Churned customers carry a higher average monthly bill ($74) compared to retained customers ($61), signaling clear pricing friction.
 
-## 📊 Dashboard Preview
-![Dashboard Screenshot](dashboard_screenshot.jpg)
+---
 
-*(Note: The initial dataset `telco_churn_unclean.csv` was raw. All data cleaning, formatting, and ETL processes were handled directly inside Power BI using Power Query before building the visualizations.)*
+## 🚀 Strategic Recommendations
+* **Incentivize Long-Term Commitments:** Provide strategic discounts or loyalty perks to convert month-to-month users into 1-Year or 2-Year contracts.
+* **Enhance Early Onboarding:** Introduce proactive customer support and engagement touchpoints during the first 6 months to reduce the 52% early-drop-off rate.
+* **Promote Add-on Services:** Encourage service bundling (such as 'Online Security' and 'Tech Support') to increase customer engagement and reduce abandonment.
 
-## 🚀 Actionable Recommendations
-1. **Contract Incentives:** Target Month-to-Month customers with loyalty discounts to upgrade them to 1-Year or 2-Year contracts.
-2. **Early Intervention:** Implement a proactive "Onboarding Retention Program" for new customers during their high-risk first 6 months.
-3. **Value-Added Services:** Bundle 'Online Security' and 'Online Backup' services for high-paying customers, as data shows these features increase customer stickiness.
+---
 
-## 📁 Repository Structure
-* `telco_churn_unclean.csv`: The raw dataset used for analysis.
-* `Telecom_Churn_Analysis.pbix`: The complete Power BI dashboard file (includes Power Query steps and DAX measures).
-* `dashboard_screenshot.jpg`: High-resolution snapshot of the final dashboard.
-* `README.md`: Project documentation and insights.
+## 📂 Repository File Structure
+* `Telco_Customer_Churn_Dashboard.pbix` - The complete, interactive Power BI report file.
+* `Raw_Telco_Customer_Data.csv` - The original uncleaned source dataset demonstrating ETL readiness.
+* `Final_Executive_Dashboard_View.png` - Visual preview snapshot of the dashboard UI.
